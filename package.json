@@ -1,0 +1,26 @@
+{
+  "name": "pierre-vscode-theme",
+  "displayName": "pierre-vscode-theme",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Pierre Light",
+        "uiTheme": "vs",
+        "path": "./themes/pierre-light-color-theme.json"
+      },
+      {
+        "label": "Pierre Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pierre-dark-color-theme.json"
+      }
+    ]
+  }
+}
