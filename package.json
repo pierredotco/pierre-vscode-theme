@@ -3,17 +3,17 @@
   "displayName": "Pierre Theme",
   "description": "Pierre theme for VS Code",
   "version": "0.0.4",
-  "publisher": "Pierre",
+  "publisher": "pierre-computer-co",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/primer/pierre-vscode-theme"
+    "url": "https://github.com/pierredotco/vscode-theme"
   },
   "bugs": {
-    "url": "https://github.com/primer/pierre-vscode-theme/issues"
+    "url": "https://github.com/pierredotco/vscode-theme/issues"
   },
   "engines": {
-    "vscode": "^1.43.0"
+    "vscode": "^1.105.0"
   },
   "categories": [
     "Themes"
@@ -48,10 +48,6 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
     "vsce": "^2.15.0"
-  },
-  "__metadata": {
-    "publisherDisplayName": "The Pierre Computer Company",
-    "publisherId": "pierre-computer-co"
   },
   "publishConfig": {
     "access": "public"

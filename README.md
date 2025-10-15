@@ -29,3 +29,7 @@ To override this (or any other) theme in your personal config file, please follo
 | `npm run build` | Builds the theme `.json` files in `./themes` directory |
 | `npm run package` | Compiles the theme `.vsix` file at the project root |
 | `npm start` | Automatically runs build on file change |
+
+## Credit
+
+This theme was built on top of [GitHub's VS Code Theme](https://github.com/primer/github-vscode-theme). All credit to them for the technique and build tooling, which we've since iterated on for more specific language tokens.
