@@ -213,7 +213,11 @@ export type Roles = {
   states: { merge: string, success: string; danger: string; warn: string; info: string };
   syntax: {
     comment: string; string: string; number: string; keyword: string;
-    regexp: string; func: string; type: string; variable: string
+    regexp: string; func: string; type: string; variable: string;
+    // Extended token types
+    operator: string; punctuation: string; constant: string;
+    parameter: string; namespace: string; decorator: string;
+    escape: string; invalid: string; tag: string; attribute: string;
   };
   ansi: {
     black: string; red: string; green: string; yellow: string;
@@ -266,7 +270,18 @@ export const light: Roles = {
     regexp: teal["600"],
     func: indigo["500"],
     type: purple["500"],
-    variable: orange["600"]
+    variable: orange["600"],
+    // Extended token types
+    operator: cyan["700"],
+    punctuation: gray["700"],
+    constant: orange["600"],
+    parameter: gray["700"],
+    namespace: yellow["800"],
+    decorator: blue["500"],
+    escape: cyan["700"],
+    invalid: "#ffffff",
+    tag: red["600"],
+    attribute: orange["600"]
   },
   ansi: {
     black: gray["980"],
@@ -331,7 +346,18 @@ export const dark: Roles = {
     regexp: teal["400"],
     func: indigo["400"],
     type: purple["400"],
-    variable: orange["400"]
+    variable: orange["400"],
+    // Extended token types
+    operator: cyan["700"],
+    punctuation: gray["700"],
+    constant: orange["400"],
+    parameter: gray["700"],
+    namespace: yellow["800"],
+    decorator: blue["400"],
+    escape: cyan["400"],
+    invalid: "#ffffff",
+    tag: red["400"],
+    attribute: orange["400"]
   },
   ansi: {
     black: gray["1000"],
