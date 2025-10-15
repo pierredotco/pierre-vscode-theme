@@ -6,8 +6,8 @@ import { makeTheme } from "./theme";
 mkdirSync("themes", { recursive: true });
 
 const out = [
-  { file: "themes/light.json", theme: makeTheme("Pierre 2 Light", "light", rolesLight) },
-  { file: "themes/dark.json",  theme: makeTheme("Pierre 2 Dark",  "dark",  rolesDark)  }
+  { file: "themes/pierre-light.json", theme: makeTheme("Pierre Light", "light", rolesLight) },
+  { file: "themes/pierre-dark.json",  theme: makeTheme("Pierre Dark",  "dark",  rolesDark)  }
 ];
 
 for (const {file, theme} of out) {
