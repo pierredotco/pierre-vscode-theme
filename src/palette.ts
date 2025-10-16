@@ -257,7 +257,7 @@ export const light: Roles = {
   },
   states: {
     merge: indigo["500"],
-    success: green["500"],
+    success: mint["500"],
     danger: red["500"],
     warn: yellow["500"],
     info: cyan["500"]
