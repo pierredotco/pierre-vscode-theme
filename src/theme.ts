@@ -112,7 +112,7 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       // Git colors
       "gitDecoration.addedResourceForeground": c.states.success,
       "gitDecoration.conflictingResourceForeground": c.states.warn,
-      "gitDecoration.modifiedResourceForeground": c.states.info,
+      "gitDecoration.modifiedResourceForeground": c.accent.primary,
       "gitDecoration.deletedResourceForeground": c.states.danger,
       "gitDecoration.untrackedResourceForeground": c.states.success,
       "gitDecoration.ignoredResourceForeground": c.fg.fg3,

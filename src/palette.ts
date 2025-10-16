@@ -274,14 +274,14 @@ export const light: Roles = {
     // Extended token types
     operator: cyan["700"],
     punctuation: gray["700"],
-    constant: orange["600"],
+    constant: yellow["600"],
     parameter: gray["700"],
     namespace: yellow["800"],
     decorator: blue["500"],
     escape: cyan["700"],
     invalid: "#ffffff",
     tag: red["600"],
-    attribute: orange["600"]
+    attribute: mint["600"]
   },
   ansi: {
     black: gray["980"],
@@ -350,14 +350,14 @@ export const dark: Roles = {
     // Extended token types
     operator: cyan["700"],
     punctuation: gray["700"],
-    constant: orange["400"],
+    constant: yellow["400"],
     parameter: gray["700"],
     namespace: yellow["800"],
     decorator: blue["400"],
     escape: cyan["400"],
     invalid: "#ffffff",
     tag: red["400"],
-    attribute: orange["400"]
+    attribute: mint["400"]
   },
   ansi: {
     black: gray["1000"],
