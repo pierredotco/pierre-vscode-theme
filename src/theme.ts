@@ -189,6 +189,9 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       { scope: "entity.other.attribute-name.ts", settings: { fontStyle: "italic" } },
       { scope: "entity.other.attribute-name.jsx", settings: { fontStyle: "italic" } },
       { scope: "entity.other.attribute-name.tsx", settings: { fontStyle: "italic" } },
+      // HTML attributes should not be italicized
+      { scope: "entity.other.attribute-name.html", settings: { fontStyle: "normal" } },
+      { scope: "entity.other.attribute-name.xml", settings: { fontStyle: "normal" } },
       { scope: "variable.language.super", settings: { fontStyle: "italic" } },
 
       // ========================================
@@ -455,7 +458,7 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       // HTML/XML
       // ========================================
       { scope: "entity.name.tag", settings: { foreground: c.syntax.tag } },
-      { scope: "entity.other.attribute-name", settings: { foreground: c.syntax.attribute } },
+      { scope: "entity.other.attribute-name", settings: { foreground: c.syntax.attribute, fontStyle: "normal" } },
       { scope: "constant.character.entity", settings: { foreground: c.syntax.tag } },
       { scope: "meta.tag", settings: { foreground: c.syntax.punctuation } },
       { scope: "invalid.illegal.bad-ampersand.html", settings: { foreground: c.syntax.punctuation } },
