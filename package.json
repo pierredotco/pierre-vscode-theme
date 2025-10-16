@@ -2,7 +2,7 @@
   "name": "pierre-vscode-theme",
   "displayName": "Pierre Theme",
   "description": "Pierre theme for VS Code",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "pierre-computer-co",
   "license": "MIT",
   "repository": {
@@ -27,14 +27,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Pierre 2 Light",
+        "label": "Pierre Light",
         "uiTheme": "vs",
-        "path": "./themes/light.json"
+        "path": "./themes/pierre-light.json"
       },
       {
-        "label": "Pierre 2 Dark",
+        "label": "Pierre Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/dark.json"
+        "path": "./themes/pierre-dark.json"
       }
     ]
   },
