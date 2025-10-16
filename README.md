@@ -1,5 +1,7 @@
 # Pierre VS Code Theme
 
+<img width="3600" height="2258" alt="Pierre Theme screenshot" src="https://github.com/user-attachments/assets/c9d0a316-9549-45c4-bca9-c0bab06dc837" />
+
 ## Install
 
 1. Go to [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=pierre-computer-co.pierre-vscode-theme).
