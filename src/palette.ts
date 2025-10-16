@@ -292,14 +292,15 @@ export const light: Roles = {
     magenta: purple["500"],
     cyan: cyan["500"],
     white: gray["300"],
-    brightBlack: gray["600"],
-    brightRed: red["400"],
-    brightGreen: green["400"],
-    brightYellow: yellow["400"],
-    brightBlue: blue["400"],
-    brightMagenta: purple["400"],
-    brightCyan: cyan["400"],
-    brightWhite: gray["100"]
+    // make bright colors match the non-bright counterparts
+    brightBlack: gray["980"],
+    brightRed: red["500"],
+    brightGreen: green["500"],
+    brightYellow: yellow["500"],
+    brightBlue: blue["500"],
+    brightMagenta: purple["500"],
+    brightCyan: cyan["500"],
+    brightWhite: gray["300"]
   }
 };
 
@@ -368,13 +369,13 @@ export const dark: Roles = {
     magenta: purple["500"],
     cyan: cyan["500"],
     white: gray["300"],
-    brightBlack: gray["700"],
-    brightRed: red["400"],
-    brightGreen: green["400"],
-    brightYellow: yellow["400"],
-    brightBlue: blue["400"],
-    brightMagenta: purple["400"],
-    brightCyan: cyan["400"],
-    brightWhite: gray["060"]
+    brightBlack: gray["1000"],
+    brightRed: red["500"],
+    brightGreen: green["500"],
+    brightYellow: yellow["500"],
+    brightBlue: blue["500"],
+    brightMagenta: purple["500"],
+    brightCyan: cyan["500"],
+    brightWhite: gray["300"]
   }
 };
