@@ -2,12 +2,17 @@
   "name": "pierre-vscode-theme",
   "displayName": "Pierre Theme",
   "description": "Pierre theme for VS Code",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "pierre-computer-co",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#141415",
+    "theme": "dark"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pierredotco/vscode-theme"
+    "url": "https://github.com/pierredotco/pierre-vscode-theme"
   },
   "bugs": {
     "url": "https://github.com/pierredotco/vscode-theme/issues"
