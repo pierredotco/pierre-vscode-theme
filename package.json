@@ -2,7 +2,7 @@
   "name": "pierre-vscode-theme",
   "displayName": "Pierre Theme",
   "description": "Pierre theme for VS Code",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "publisher": "pierre-computer-co",
   "icon": "icon.png",
   "galleryBanner": {
