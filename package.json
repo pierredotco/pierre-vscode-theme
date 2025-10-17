@@ -60,5 +60,14 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "files": [
+    "src/**/*",
+    "themes/*.json",
+    "icon.png",
+    "LICENSE.md",
+    "README.md",
+    "package.json",
+    "tsconfig.json"
+  ]
 }
