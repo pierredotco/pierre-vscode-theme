@@ -228,12 +228,17 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       // ========================================
       // PUNCTUATION
       // ========================================
+      { scope: "punctuation", settings: { foreground: c.syntax.punctuation } },
       { scope: "punctuation.separator.delimiter", settings: { foreground: c.syntax.punctuation } },
       { scope: "punctuation.separator.key-value", settings: { foreground: c.syntax.punctuation } },
       { scope: "punctuation.terminator", settings: { foreground: c.syntax.punctuation } },
       { scope: "meta.brace", settings: { foreground: c.syntax.punctuation } },
       { scope: "meta.brace.square", settings: { foreground: c.syntax.punctuation } },
+      { scope: "meta.brace.round", settings: { foreground: c.syntax.punctuation } },
       { scope: "function.brace", settings: { foreground: c.syntax.punctuation } },
+      { scope: ["punctuation.definition.parameters","punctuation.definition.typeparameters"], settings: { foreground: c.syntax.punctuation } },
+      { scope: ["punctuation.definition.block","punctuation.definition.tag"], settings: { foreground: c.syntax.punctuation } },
+      { scope: ["meta.tag.tsx","meta.tag.jsx","meta.tag.js","meta.tag.ts"], settings: { foreground: c.syntax.punctuation } },
 
       // ========================================
       // JAVASCRIPT/TYPESCRIPT SPECIFIC
