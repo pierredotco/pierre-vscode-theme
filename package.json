@@ -1,9 +1,13 @@
 {
-  "name": "pierre-vscode-theme",
+  "name": "@pierre/vscode-theme",
   "displayName": "Pierre Theme",
-  "description": "Pierre theme for VS Code",
-  "version": "0.0.11",
+  "description": "Pierre theme for Shiki, VS Code, and more",
+  "version": "0.0.12",
   "publisher": "pierre-computer-co",
+  "author": {
+    "name": "The Pierre Computer Company",
+    "url": "https://pierre.co"
+  },
   "icon": "icon.png",
   "galleryBanner": {
     "color": "#141415",
