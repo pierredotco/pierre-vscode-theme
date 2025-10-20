@@ -566,9 +566,22 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
 }
 
 // helpers
-function alpha(hex: string, opacity: number): string {
+function alpha(color: string, opacity: number): string {
+  // Handle Display P3 color format
+  if (color.startsWith('color(display-p3')) {
+    // Extract the existing alpha if present, or insert new one
+    if (color.includes(' / ')) {
+      // Replace existing alpha
+      return color.replace(/ \/ [\d.]+\)$/, ` / ${opacity.toFixed(6)})`);
+    } else {
+      // Add alpha before closing paren
+      return color.replace(/\)$/, ` / ${opacity.toFixed(6)})`);
+    }
+  }
+
+  // Handle hex color format
   const alphaHex = Math.round(opacity * 255).toString(16).padStart(2, "0");
-  return `${hex}${alphaHex}`;
+  return `${color}${alphaHex}`;
 }
 
 function hexToRgb(hex: string): [number,number,number] {
@@ -576,8 +589,27 @@ function hexToRgb(hex: string): [number,number,number] {
   return [(v>>16)&255,(v>>8)&255,v&255];
 }
 
-function mix(h1: string, h2: string, w=0.5) {
-  const [r1,g1,b1]=hexToRgb(h1), [r2,g2,b2]=hexToRgb(h2);
+function p3ToRgb(p3Color: string): [number,number,number] {
+  // Extract RGB values from color(display-p3 r g b) format
+  const match = p3Color.match(/color\(display-p3\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)/);
+  if (match) {
+    return [parseFloat(match[1]) * 255, parseFloat(match[2]) * 255, parseFloat(match[3]) * 255];
+  }
+  return [0, 0, 0];
+}
+
+function mix(c1: string, c2: string, w=0.5) {
+  // Handle Display P3 colors
+  if (c1.startsWith('color(display-p3') && c2.startsWith('color(display-p3')) {
+    const [r1,g1,b1] = p3ToRgb(c1);
+    const [r2,g2,b2] = p3ToRgb(c2);
+    const r=Math.round(r1*(1-w)+r2*w), g=Math.round(g1*(1-w)+g2*w), b=Math.round(b1*(1-w)+b2*w);
+    // Convert back to P3 format (0-1 range)
+    return `color(display-p3 ${(r/255).toFixed(6)} ${(g/255).toFixed(6)} ${(b/255).toFixed(6)})`;
+  }
+
+  // Handle hex colors
+  const [r1,g1,b1]=hexToRgb(c1), [r2,g2,b2]=hexToRgb(c2);
   const r=Math.round(r1*(1-w)+r2*w), g=Math.round(g1*(1-w)+g2*w), b=Math.round(b1*(1-w)+b2*w);
   return `#${[r,g,b].map(x=>x.toString(16).padStart(2,"0")).join("")}`;
 }

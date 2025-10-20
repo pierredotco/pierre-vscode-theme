@@ -40,6 +40,16 @@
         "label": "Pierre Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/pierre-dark.json"
+      },
+      {
+        "label": "Pierre Light Vibrant",
+        "uiTheme": "vs",
+        "path": "./themes/pierre-light-vibrant.json"
+      },
+      {
+        "label": "Pierre Dark Vibrant",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pierre-dark-vibrant.json"
       }
     ]
   },

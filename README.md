@@ -6,9 +6,20 @@
 
 1. Go to the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=pierre-computer-co.pierre-vscode-theme).
 2. Click on the "Install" button.
-3. Then [select a theme](https://code.visualstudio.com/docs/getstarted/themes#_selecting-the-color-theme). Two themes are included:
+3. Then [select a theme](https://code.visualstudio.com/docs/getstarted/themes#_selecting-the-color-theme). Four themes are included:
     - `Pierre Light`
     - `Pierre Dark`
+    - `Pierre Light Vibrant` (Display P3 color space)
+    - `Pierre Dark Vibrant` (Display P3 color space)
+
+## Vibrant themes (Display P3)
+
+> [!NOTE]
+> Vibrant themes do not work in VS Code at this time as it does not support color formats other than Hex or RGB. You can, however, use these with [Precision Diffs](https://pierrejs-docs.vercel.app) or any [Shiki](https://shiki.style) project to render code.
+
+The **Vibrant** theme variants use CSS's `color(display-p3 r g b)` format with enhanced saturation to fully utilize Display P3's wider color gamut. Display P3 can represent ~25% more colors than standard sRGB, and these themes are optimized to take full advantage of that on compatible displays.
+
+The conversion algorithm transforms sRGB colors to Display P3 through proper linear color space transformations, then enhances saturation (15-30%) and luminance (5% for vibrant colors) to push colors into the wider P3 gamut that isn't accessible in sRGB.
 
 ## Override
 
