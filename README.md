@@ -22,13 +22,15 @@ To override this (or any other) theme in your personal config file, please follo
 4. Open `Code > Preferences > Color Theme` [`⌘k ⌘t`] and pick the "Pierre…" theme you want to test.
 5. Make changes to the [`/src/theme.ts`](https://github.com/pierredotco/pierre-vscode-theme/blob/main/src/theme.ts) file.
 6. Run `npm run build` to update the theme. You can also run `npm run start` instead to automatically rebuild the theme while making changes and no reloading should be necessary.
-7. Once you're happy, commit your changes and open a PR.
+7. Run `npm test` to validate your changes (this runs automatically on PRs).
+8. Once you're happy, commit your changes and open a PR.
 
 ## Scripts
 
 | Script | Description |
 | --- | --- |
 | `npm run build` | Builds the theme `.json` files in `./themes` directory |
+| `npm test` | Runs validation tests on the theme (includes build) |
 | `npm run package` | Compiles the theme `.vsix` file at the project root |
 | `npm start` | Automatically runs build on file change |
 
