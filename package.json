@@ -2,7 +2,7 @@
   "name": "@pierre/vscode-theme",
   "displayName": "Pierre Theme",
   "description": "Pierre theme for Shiki, VS Code, and more",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "publisher": "pierre-computer-co",
   "author": {
     "name": "The Pierre Computer Company",
