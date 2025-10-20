@@ -12,6 +12,15 @@ function isValidHexColor(color: string): boolean {
   return /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$/.test(color);
 }
 
+function isValidP3Color(color: string): boolean {
+  // Match color(display-p3 r g b) or color(display-p3 r g b / alpha)
+  return /^color\(display-p3\s+[\d.]+\s+[\d.]+\s+[\d.]+(\s+\/\s+[\d.]+)?\)$/.test(color);
+}
+
+function isValidColor(color: string): boolean {
+  return isValidHexColor(color) || isValidP3Color(color);
+}
+
 function collectColors(obj: any, path = ""): string[] {
   const issues: string[] = [];
 
@@ -20,9 +29,9 @@ function collectColors(obj: any, path = ""): string[] {
 
     if (typeof value === "string") {
       usedColors.add(value);
-      if (value.startsWith("#")) {
-        if (!isValidHexColor(value)) {
-          issues.push(`Invalid hex color at ${currentPath}: ${value}`);
+      if (value.startsWith("#") || value.startsWith("color(")) {
+        if (!isValidColor(value)) {
+          issues.push(`Invalid color at ${currentPath}: ${value}`);
         }
       }
     } else if (typeof value === "object" && value !== null) {
@@ -96,7 +105,7 @@ function testThemeGeneration(themeName: string, themeType: "light" | "dark", rol
         errors.push(`tokenColors[${idx}] missing settings`);
       } else if (token.settings.foreground) {
         usedColors.add(token.settings.foreground);
-        if (!isValidHexColor(token.settings.foreground)) {
+        if (!isValidColor(token.settings.foreground)) {
           errors.push(`tokenColors[${idx}] has invalid foreground color: ${token.settings.foreground}`);
         }
       }
@@ -106,14 +115,14 @@ function testThemeGeneration(themeName: string, themeType: "light" | "dark", rol
     for (const [key, value] of Object.entries(theme.semanticTokenColors)) {
       if (typeof value === "string") {
         usedColors.add(value);
-        if (!isValidHexColor(value)) {
+        if (!isValidColor(value)) {
           errors.push(`semanticTokenColors["${key}"] has invalid color: ${value}`);
         }
       } else if (typeof value === "object" && value !== null) {
         const semanticValue = value as any;
         if (semanticValue.foreground) {
           usedColors.add(semanticValue.foreground);
-          if (!isValidHexColor(semanticValue.foreground)) {
+          if (!isValidColor(semanticValue.foreground)) {
             errors.push(`semanticTokenColors["${key}"].foreground has invalid color: ${semanticValue.foreground}`);
           }
         }
@@ -140,7 +149,9 @@ function testGeneratedFiles() {
 
   const files = [
     { path: "themes/pierre-light.json", expectedType: "light" },
-    { path: "themes/pierre-dark.json", expectedType: "dark" }
+    { path: "themes/pierre-dark.json", expectedType: "dark" },
+    { path: "themes/pierre-light-vibrant.json", expectedType: "light" },
+    { path: "themes/pierre-dark-vibrant.json", expectedType: "dark" }
   ];
 
   for (const { path, expectedType } of files) {
