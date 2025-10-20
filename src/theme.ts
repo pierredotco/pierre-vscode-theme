@@ -144,9 +144,7 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       // ========================================
       // COMMENTS
       // ========================================
-      { scope: ["comment","punctuation.definition.comment"], settings: { foreground: c.syntax.comment, fontStyle: "italic" } },
-      { scope: "comment.line.double-slash", settings: { fontStyle: "italic" } },
-      { scope: "comment.block.documentation", settings: { fontStyle: "italic" } },
+      { scope: ["comment","punctuation.definition.comment"], settings: { foreground: c.syntax.comment } },
       { scope: "comment markup.link", settings: { foreground: c.syntax.comment } },
 
       // ========================================
@@ -180,19 +178,11 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       { scope: ["variable","identifier","meta.definition.variable"], settings: { foreground: c.syntax.variable } },
       { scope: ["variable.other.readwrite","meta.object-literal.key","support.variable.property","support.variable.object.process","support.variable.object.node"], settings: { foreground: c.syntax.variable } },
       { scope: "variable.language", settings: { foreground: c.syntax.namespace } },
-      { scope: "variable.parameter.function", settings: { foreground: c.syntax.parameter, fontStyle: "italic" } },
+      { scope: "variable.parameter.function", settings: { foreground: c.syntax.parameter } },
       { scope: "function.parameter", settings: { foreground: c.syntax.parameter } },
       { scope: "variable.parameter", settings: { foreground: c.syntax.parameter } },
       { scope: "variable.parameter.function.language.python", settings: { foreground: c.syntax.constant } },
       { scope: "variable.parameter.function.python", settings: { foreground: c.syntax.constant } },
-      { scope: "entity.other.attribute-name.js", settings: { fontStyle: "italic" } },
-      { scope: "entity.other.attribute-name.ts", settings: { fontStyle: "italic" } },
-      { scope: "entity.other.attribute-name.jsx", settings: { fontStyle: "italic" } },
-      { scope: "entity.other.attribute-name.tsx", settings: { fontStyle: "italic" } },
-      // HTML attributes should not be italicized
-      { scope: "entity.other.attribute-name.html", settings: { fontStyle: "normal" } },
-      { scope: "entity.other.attribute-name.xml", settings: { fontStyle: "normal" } },
-      { scope: "variable.language.super", settings: { fontStyle: "italic" } },
 
       // ========================================
       // FUNCTIONS & METHODS
@@ -280,8 +270,6 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       { scope: ["punctuation.definition.arguments.begin.python","punctuation.definition.arguments.end.python","punctuation.separator.arguments.python","punctuation.definition.list.begin.python","punctuation.definition.list.end.python"], settings: { foreground: c.syntax.punctuation } },
       { scope: "support.type.python", settings: { foreground: c.syntax.operator } },
       { scope: "keyword.operator.logical.python", settings: { foreground: c.syntax.keyword } },
-      { scope: "keyword.control.import.python", settings: { fontStyle: "italic" } },
-      { scope: "keyword.control.flow.python", settings: { fontStyle: "italic" } },
       { scope: "meta.function-call.generic.python", settings: { foreground: c.syntax.func } },
       { scope: "constant.character.format.placeholder.other.python", settings: { foreground: c.syntax.constant } },
       { scope: "meta.function.decorator.python", settings: { foreground: c.syntax.func } },
