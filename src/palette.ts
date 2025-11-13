@@ -122,17 +122,17 @@ const cyan = {
 };
 
 const blue = {
-  "050": "#eff3ff",
-  "100": "#dfe7ff",
-  "200": "#bdcfff",
-  "300": "#97b8ff",
-  "400": "#69a1ff",
-  "500": "#008cff",
-  "600": "#1a76d4",
-  "700": "#2160ab",
-  "800": "#214b84",
-  "900": "#1f375f",
-  "950": "#19253c"
+  "050": "#eff5ff",
+  "100": "#dfebff",
+  "200": "#bdd7ff",
+  "300": "#97c4ff",
+  "400": "#69b1ff",
+  "500": "#009fff",
+  "600": "#1a85d4",
+  "700": "#216cab",
+  "800": "#215584",
+  "900": "#1f3e5e",
+  "950": "#19283c"
 };
 
 const indigo = {
@@ -325,8 +325,8 @@ export const dark: Roles = {
     elevated: gray["960"]
   },
   accent: {
-    primary: blue["600"],
-    link: blue["600"],
+    primary: blue["500"],
+    link: blue["500"],
     subtle: blue["950"],
     contrastOnAccent: gray["1040"]
   },
