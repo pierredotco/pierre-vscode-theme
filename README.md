@@ -9,8 +9,8 @@
 3. Then [select a theme](https://code.visualstudio.com/docs/getstarted/themes#_selecting-the-color-theme). Four themes are included:
     - `Pierre Light`
     - `Pierre Dark`
-    - `Pierre Light Vibrant` (Display P3 color space)
-    - `Pierre Dark Vibrant` (Display P3 color space)
+    - `Pierre Light Vibrant` (Display P3 color space, not for VS Code editors)
+    - `Pierre Dark Vibrant` (Display P3 color space, not for VS Code editors)
 
 ## Vibrant themes (Display P3)
 
