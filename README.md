@@ -1,6 +1,7 @@
 # Pierre VS Code Theme
 
-![Pierre Theme screenshot](https://github.com/user-attachments/assets/c9d0a316-9549-45c4-bca9-c0bab06dc837)
+![Pierre dark theme screenshot](https://github.com/user-attachments/assets/e8b2a6e0-995b-4515-997a-f805f4fbc5bf)
+![Pierre light theme screenshot](https://github.com/user-attachments/assets/2ebb09d0-eb42-4c28-9617-35873d96ed8f)
 
 ## Install
 
